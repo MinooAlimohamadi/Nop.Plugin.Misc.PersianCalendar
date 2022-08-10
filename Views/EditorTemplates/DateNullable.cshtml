@@ -1,0 +1,17 @@
+﻿@model DateTime?
+@{
+    NopHtml.AddCssFileParts(DefaultPlugin.ViewsCss);
+    NopHtml.AddScriptParts(ResourceLocation.Footer, $"{DefaultPlugin.ViewsJs}persian-date.min.js");
+    NopHtml.AddScriptParts(ResourceLocation.Footer, $"{DefaultPlugin.ViewsJs}persian-datepicker.min.js");
+}
+<input id="@Html.IdForModel()" name="@Html.NameForModel()" value="@(Model > DateTime.MinValue || Model.HasValue ? Model.Value.ToShortDateString() : null)" />
+<script>
+    $(document).ready(function () {
+        $("#@Html.IdForModel()").persianDatepicker({
+            initialValue: false,
+            initialValueType: 'persian',
+            observer: true,
+            format: 'YYYY/MM/DD'
+        });
+    });
+</script>

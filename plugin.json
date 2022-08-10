@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Misc",
+  "FriendlyName": "Persian Calendar",
+  "SystemName": "Misc.PersianCalendar",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.50" ],
+  "Author": "Minoo Alimohammadi",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Misc.PersianCalendar.dll",
+  "Description": "Persian Calendar"
+}
